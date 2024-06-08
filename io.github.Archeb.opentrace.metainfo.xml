@@ -10,9 +10,8 @@
   <project_license>GPL-3.0</project_license>
   <description>
     <p>OpenTrace is a cross-platform GUI wrapper for NextTrace. Bringing you a sense of familiarity.</p>
-    <p></p>
     <p>Note: This build uses a dirty approach to run program with cap_net_raw caps. You'll need to allow pkexec to setcap at the first use.</p>
-    <p>If map isn't showing up, try switching to Google maps in File->Preferences.</p>
+    <p>If map isn't showing up, try switching to Google maps in File-&gt;Preferences.</p>
   </description>
   <screenshots>
     <screenshot type="default">
@@ -20,6 +19,9 @@
     </screenshot>
   </screenshots>
   <releases>
+    <release version="1.4.3.0" date="2024-06-08">
+      <description></description>
+    </release>
     <release version="1.4.2.1" date="2023-12-14" type="stable"/>
   </releases>
   <url type="homepage">https://github.com/Archeb/opentrace</url>
