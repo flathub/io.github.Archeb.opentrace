@@ -3,7 +3,7 @@ for branch in `flatpak-spawn --host flatpak list --app --columns=application,arc
 do
     # generally those should be the same inode
     installdir=`flatpak-spawn --host flatpak info --show-location $branch`
-    if ! flatpak-spawn --host getcap "$installdir/files/opentrace/_nexttrace" | grep cap_net_admin > /dev/null
+    if ! flatpak-spawn --env=PATH=/sbin:/usr/sbin:/usr/bin --host sh -c "getcap '$installdir/files/opentrace/_nexttrace'" | grep cap_net_admin > /dev/null
     then
     #     echo "Setting up caps.."
         flatpak-spawn --host pkexec bash -c "setcap cap_net_raw,cap_net_admin+eip $installdir/files/opentrace/_nexttrace"
