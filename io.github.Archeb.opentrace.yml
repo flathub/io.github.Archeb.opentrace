@@ -18,8 +18,8 @@ modules:
   - name: webkit2gtk-4.0
     sources:
       - type: archive
-        url: https://webkitgtk.org/releases/webkitgtk-2.42.4.tar.xz
-        sha256: 52288b30bda22373442cecb86f9c9a569ad8d4769a1f97b352290ed92a67ed86
+        url: https://webkitgtk.org/releases/webkitgtk-2.44.2.tar.xz
+        sha256: 523f42c8ff24832add17631f6eaafe8f9303afe316ef1a7e1844b952a7f7521b
         x-checker-data:
           type: html
           url: https://webkitgtk.org/releases/
@@ -66,8 +66,8 @@ modules:
       - type: file
         only-arches: [x86_64]
         dest-filename: linux-x64.tar.gz
-        url: https://github.com/Archeb/opentrace/releases/download/v1.4.2.1/linux-x64.tar.gz
-        sha256: b7937c807b275abb9f036c951ea41adf61e5a8dea39d1e3723b5717aa2537031
+        url: https://github.com/Archeb/opentrace/releases/download/v1.4.3.0/linux-x64.tar.gz
+        sha256: dabe014c8de2072b95ebc8ce2caa85fbac31a9c2537cfd8670ce94129e93ef28
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
