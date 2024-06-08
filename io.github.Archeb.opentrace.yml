@@ -33,6 +33,9 @@ modules:
       - -DENABLE_MINIBROWSER=OFF
       - -DENABLE_WEBDRIVER=OFF
       - -DENABLE_GAMEPAD=OFF
+      - -DUSE_LIBBACKTRACE=OFF
+      - -DUSE_GTK4=OFF
+      - -DUSE_SOUP2=ON
       - -DENABLE_BUBBLEWRAP_SANDBOX=OFF
     modules:
       - shared-modules/libsoup/libsoup-2.4.json
