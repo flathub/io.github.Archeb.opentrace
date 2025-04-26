@@ -1,6 +1,6 @@
 app-id: io.github.Archeb.opentrace
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '48'
 sdk: org.gnome.Sdk
 separate-locales: false
 rename-icon: opentrace
@@ -18,26 +18,27 @@ modules:
   - name: webkit2gtk-4.0
     sources:
       - type: archive
-        url: https://webkitgtk.org/releases/webkitgtk-2.44.4.tar.xz
-        sha256: 2ce4ec1b78413035037aba8326b31ed72696626b7bea7bace5e46ac0d8cbe796
-        # x-checker-data:
-        #   type: html
-        #   url: https://webkitgtk.org/releases/
-        #   version-pattern: LATEST-STABLE-(\d[\.\d]+\d)
-        #   url-template: https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
-        #   webkit2gtk should be locked at 2.44.4, because higher version breaks.
+        url: https://webkitgtk.org/releases/webkitgtk-2.48.0.tar.xz
+        sha256: 94904a55cf12d44a4e36ceadafff02d46da73d76be9b4769f34cbfdf0eebf88e
+        x-checker-data:
+          type: html
+          url: https://webkitgtk.org/releases/
+          version-pattern: LATEST-STABLE-(\d[\.\d]+\d)
+          url-template: https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
     buildsystem: cmake-ninja
     config-opts:
-      - -DPORT=GTK
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DENABLE_DOCUMENTATION=OFF
-      - -DENABLE_MINIBROWSER=OFF
-      - -DENABLE_WEBDRIVER=OFF
-      - -DENABLE_GAMEPAD=OFF
-      - -DUSE_LIBBACKTRACE=OFF
-      - -DUSE_GTK4=OFF
-      - -DUSE_SOUP2=ON
       - -DENABLE_BUBBLEWRAP_SANDBOX=OFF
+      - -DENABLE_DOCUMENTATION=OFF
+      - -DENABLE_GAMEPAD=OFF
+      - -DENABLE_INTROSPECTION=OFF
+      - -DENABLE_MINIBROWSER=OFF
+      - -DENABLE_SPEECH_SYNTHESIS=OFF
+      - -DENABLE_WEBDRIVER=OFF
+      - -DPORT=GTK
+      - -DUSE_GTK4=OFF
+      - -DUSE_LIBBACKTRACE=OFF
+      - -DUSE_SOUP2=ON
     modules:
       - shared-modules/libsoup/libsoup-2.4.json
 
@@ -69,8 +70,8 @@ modules:
       - type: file
         only-arches: [x86_64]
         dest-filename: linux-x64.tar.gz
-        url: https://github.com/Archeb/opentrace/releases/download/v1.4.3.0/linux-x64.tar.gz
-        sha256: dabe014c8de2072b95ebc8ce2caa85fbac31a9c2537cfd8670ce94129e93ef28
+        url: https://github.com/Archeb/opentrace/releases/download/v1.4.2.1/linux-x64.tar.gz
+        sha256: b7937c807b275abb9f036c951ea41adf61e5a8dea39d1e3723b5717aa2537031
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
