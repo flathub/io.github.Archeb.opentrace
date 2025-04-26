@@ -20,12 +20,6 @@
     </screenshot>
   </screenshots>
   <releases>
-    <release version="1.4.3.2" date="2025-04-24">
-      <description></description>
-    </release>
-    <release version="1.4.3.0" date="2024-06-08">
-      <description/>
-    </release>
     <release version="1.4.2.1" date="2023-12-14" type="stable"/>
   </releases>
   <url type="homepage">https://github.com/Archeb/opentrace</url>
