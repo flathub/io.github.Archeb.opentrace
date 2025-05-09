@@ -70,8 +70,8 @@ modules:
       - type: file
         only-arches: [x86_64]
         dest-filename: linux-x64.tar.gz
-        url: https://github.com/Archeb/opentrace/releases/download/v1.4.3.2/linux-x64.tar.gz
-        sha256: 57f7ed26beceaadb2ea6fc5551d8d5a3b405542d93066b4da479c3154cc474f4
+        url: https://github.com/Archeb/opentrace/releases/download/v1.4.4.0/linux-x64.tar.gz
+        sha256: 200e23de0bee6603944818e8e48448825a394769f17d3c1f01f63495b5164653
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
