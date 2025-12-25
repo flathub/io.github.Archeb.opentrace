@@ -81,7 +81,18 @@ modules:
           url-query: >-
             .assets[] | select(.name=="linux-x64.tar.gz") |
             .browser_download_url
-
+      - type: file
+        only-arches: [aarch64]
+        dest-filename: linux-arm64.tar.gz
+        url: https://github.com/Archeb/opentrace/releases/download/v1.5.0.0/linux-arm64.tar.gz
+        sha256: 3ff41fd0028b9c43c8ced1c177d7e283fb1c87e4deb804d2bcc5d0b12f16db4f
+        x-checker-data:
+          type: json
+          url: https://api.github.com/repos/Archeb/opentrace/releases/latest
+          version-query: .tag_name | sub("^v"; "")
+          url-query: >-
+            .assets[] | select(.name=="linux-arm64.tar.gz") |
+            .browser_download_url
       - type: file
         path: io.github.Archeb.opentrace.metainfo.xml
 
