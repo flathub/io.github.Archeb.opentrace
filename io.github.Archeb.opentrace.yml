@@ -44,6 +44,8 @@ modules:
 
       - name: unifdef
         no-autogen: true
+        make-args:
+          - CFLAGS=-std=gnu99 -O2 # fix `constexpr` keyword
         make-install-args:
           - prefix=${FLATPAK_DEST}
         sources:
