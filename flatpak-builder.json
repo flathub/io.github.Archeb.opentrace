@@ -1,0 +1,5 @@
+{
+  "build-options": {
+    "max-threads": 6
+  }
+}
