@@ -26,6 +26,9 @@ modules:
           version-pattern: LATEST-STABLE-(\d[\.\d]+\d)
           url-template: https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
     buildsystem: cmake-ninja
+    build-options:
+      env:
+        FLATPAK_BUILDER_N_JOBS: "6"
     config-opts:
       - -DCMAKE_BUILD_TYPE=RelWithDebInfo
       - -DENABLE_BUBBLEWRAP_SANDBOX=OFF
