@@ -15,6 +15,7 @@
   </description>
   <screenshots>
     <screenshot type="default">
+      <caption>Main OpenTrace interface with a traceroute map and hop details</caption>
       <image type="source">https://github.com/flathub/io.github.Archeb.opentrace/blob/master/screenshot.png?raw=true</image>
     </screenshot>
   </screenshots>
