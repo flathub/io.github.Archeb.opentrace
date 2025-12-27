@@ -1,8 +1,8 @@
 [Desktop Entry]
 Name=OpenTrace
-Keywords=traceroute;OpenTrace;network;
+Keywords=traceroute;OpenTrace;network;NextTrace;
 Exec=OpenTrace
-Comment=OpenTrace is a cross-platform GUI wrapper for NextTrace. Bringing you a sense of familiarity.
+Comment=Cross-platform GUI traceroute tool
 Icon=opentrace
 Type=Application
 Terminal=false
