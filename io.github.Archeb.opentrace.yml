@@ -8,62 +8,21 @@ rename-desktop-file: opentrace.desktop
 command: OpenTrace
 finish-args:
   - --share=ipc
-  - --socket=x11
+  - --socket=wayland
+  - --socket=fallback-x11
   - --socket=pulseaudio
   - --talk-name=org.freedesktop.Flatpak
   - --device=dri
   - --share=network
 
 modules:
-  - name: webkit2gtk-4.0
-    sources:
-      - type: archive
-        url: https://webkitgtk.org/releases/webkitgtk-2.48.6.tar.xz
-        sha256: d9ac3034b7a39c2aaa567e6112b3124b158e591a74439e46974a031dd0e44e24
-        x-checker-data:
-          type: html
-          url: https://webkitgtk.org/releases/
-          version-pattern: LATEST-STABLE-(\d[\.\d]+\d)
-          url-template: https://webkitgtk.org/releases/webkitgtk-$version.tar.xz
-    buildsystem: cmake-ninja
-    build-options:
-      env:
-        FLATPAK_BUILDER_N_JOBS: "6"
-    config-opts:
-      - -DCMAKE_BUILD_TYPE=RelWithDebInfo
-      - -DENABLE_BUBBLEWRAP_SANDBOX=OFF
-      - -DENABLE_DOCUMENTATION=OFF
-      - -DENABLE_GAMEPAD=OFF
-      - -DENABLE_INTROSPECTION=OFF
-      - -DENABLE_MINIBROWSER=OFF
-      - -DENABLE_SPEECH_SYNTHESIS=OFF
-      - -DENABLE_WEBDRIVER=OFF
-      - -DPORT=GTK
-      - -DUSE_GTK4=OFF
-      - -DUSE_LIBBACKTRACE=OFF
-      - -DUSE_SOUP2=ON
-    modules:
-      - shared-modules/libsoup/libsoup-2.4.json
-
-      - name: unifdef
-        no-autogen: true
-        make-args:
-          - CFLAGS=-std=gnu99 -O2 # fix `constexpr` keyword
-        make-install-args:
-          - prefix=${FLATPAK_DEST}
-        sources:
-          - type: archive
-            url: https://dotat.at/prog/unifdef/unifdef-2.12.tar.xz
-            sha256: 43ce0f02ecdcdc723b2475575563ddb192e988c886d368260bc0a63aee3ac400
-        cleanup:
-          - '*'
   - name: opentrace
     buildsystem: simple
     build-options:
       no-debuginfo: true
     build-commands:
       - mkdir /app/opentrace
-      - tar -C /app/opentrace/ -zxf linux-x64.tar.gz
+      - tar -C /app/opentrace/ -zxf *.tar.gz
       - mv /app/opentrace/nexttrace /app/opentrace/_nexttrace
       - install -Dm644 ${FLATPAK_ID}.metainfo.xml -t /app/share/metainfo
       - install -Dm644 opentrace.png -t /app/share/icons/hicolor/512x512/apps
