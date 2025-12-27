@@ -2,8 +2,8 @@
 <component type="desktop">
   <id>io.github.Archeb.opentrace</id>
   <name>OpenTrace</name>
-  <summary>A cross-platform GUI wrapper for NextTrace</summary>
-  <summary xml:lang="zh-Hans">NextTrace 的跨平台 GUI 界面</summary>
+  <summary>Cross-platform GUI traceroute tool</summary>
+  <summary xml:lang="zh-Hans">一个跨平台可视化路由追踪工具</summary>
   <developer_name>Archeb</developer_name>
   <launchable type="desktop-id">io.github.Archeb.opentrace.desktop</launchable>
   <metadata_license>CC0-1.0</metadata_license>
@@ -15,6 +15,7 @@
   </description>
   <screenshots>
     <screenshot type="default">
+      <caption>Main OpenTrace interface with a traceroute map and hop details</caption>
       <image type="source">https://github.com/flathub/io.github.Archeb.opentrace/blob/master/screenshot.png?raw=true</image>
     </screenshot>
   </screenshots>
