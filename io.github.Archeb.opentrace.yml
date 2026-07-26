@@ -34,8 +34,8 @@ modules:
       - type: file
         only-arches: [x86_64]
         dest-filename: linux-x64.tar.gz
-        url: https://github.com/Archeb/opentrace/releases/download/v1.5.1/linux-x64.tar.gz
-        sha256: acfc08a3285218444d1ed9d127de699b5666118a666059990bb131d6dfaa6104
+        url: https://github.com/Archeb/opentrace/releases/download/v1.5.2/linux-x64.tar.gz
+        sha256: a8fb579abb0fd3cdca36d3ad0c365a9e5a4cc57b12f8298674e1efc8f265be27
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
@@ -46,8 +46,8 @@ modules:
       - type: file
         only-arches: [aarch64]
         dest-filename: linux-arm64.tar.gz
-        url: https://github.com/Archeb/opentrace/releases/download/v1.5.1/linux-arm64.tar.gz
-        sha256: e7ed208467daedd2a365448e212b72337743b878bd3a3d3f0d329dd348ace70f
+        url: https://github.com/Archeb/opentrace/releases/download/v1.5.2/linux-arm64.tar.gz
+        sha256: 201aa225e95bb8a52b46e6a16cfad3092caf1d3e9d9f2a62e603941218c8435a
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
