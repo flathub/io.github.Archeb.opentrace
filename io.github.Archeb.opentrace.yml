@@ -35,7 +35,7 @@ modules:
         only-arches: [x86_64]
         dest-filename: linux-x64.tar.gz
         url: https://github.com/Archeb/opentrace/releases/download/v1.5.2/linux-x64.tar.gz
-        sha256: a8fb579abb0fd3cdca36d3ad0c365a9e5a4cc57b12f8298674e1efc8f265be27
+        sha256: 5c5c6891a8f8c83e38c3caa618589cf7739d2665ade250fc5e0d5394d2b2f672
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
@@ -47,7 +47,7 @@ modules:
         only-arches: [aarch64]
         dest-filename: linux-arm64.tar.gz
         url: https://github.com/Archeb/opentrace/releases/download/v1.5.2/linux-arm64.tar.gz
-        sha256: 201aa225e95bb8a52b46e6a16cfad3092caf1d3e9d9f2a62e603941218c8435a
+        sha256: 475899f87d62d51cca8dd1cdedc106c0be9cea74db8dcaf074d9a5eb038e0102
         x-checker-data:
           type: json
           url: https://api.github.com/repos/Archeb/opentrace/releases/latest
